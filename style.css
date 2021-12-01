@@ -1,0 +1,211 @@
+
+body{
+    background: rgb(227,232,233);
+    background: linear-gradient(180deg, #e6e7e9 30%, #a4a9ad 70%);
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    color: black;
+
+    font-size: 1.5rem/* 24px */;
+    line-height: 2rem/* 32px */;
+    -webkit-user-select: none;    /* Safari */
+    -webkit-touch-callout: none;  /* iOS Safari */
+    -khtml-user-select: none;     /* Konqueror HTML */
+    -ms-user-select: none;        /* Internet Explorer/Edge */
+    -moz-user-select: none;       /* Old versions of Firefox */
+     user-select: none;           /* Non-prefixed version*/
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    cursor: default;
+
+    height: 30px;
+    display: flex;
+    position:relative;
+    align-items:center;
+    justify-content: space-between;
+    padding: 1.25rem/* 20px */;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+  nav > ul {
+
+    display: flex;
+
+    gap: 2rem/* 16px */;
+
+
+
+}
+.toggle-menu{
+    display: none;
+}
+@media(max-width: 760px)
+{
+
+
+    nav > ul[data-visible='false']{
+        right: -15rem;
+        gap: 2rem;
+        transition: right 0.5s ease;
+        
+    }
+    .toggle-menu{
+        transition: transform 0.5s ease;
+        display:inline-block;
+        position:absolute;
+        cursor:pointer;
+        z-index: 999;
+        border: none;
+outline: none;
+        background: url('assets/menu.svg');
+        width:2rem;
+        aspect-ratio: 1;
+        top:1.5rem;
+        right:2rem;
+    }
+    nav > ul {
+        z-index:100;
+        border-top-left-radius:30%;
+        position:fixed;
+        top: 0;
+        right: 0;
+        margin:auto;
+        background: linear-gradient(180deg, rgb(230, 231, 233,0.1) 30%, rgb(164, 169, 173, 0.1) 70%);
+        backdrop-filter: blur(2px);
+        padding-right: 7rem;
+        height: 100%;
+        padding-top:7rem;
+        flex-direction: column;
+        justify-content: start;
+        transition: right 0.5s ease-in-out;
+
+        gap: 2rem/* 16px */;
+    
+    
+    }
+
+}
+nav > ul > li {
+        position: relative;
+        list-style-type: none;
+        text-decoration: none;
+        width: max-content;
+ 
+
+}
+nav > ul > li::after{
+    content: '';
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    width:0%;
+    height:0.175rem;
+    background: rgb(191, 210, 236);
+    transition: width 0.25s ease-in-out;
+
+}
+nav > ul > li:hover::after{
+    width:100%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main{
+
+
+
+}
+.myInfo{
+
+    backdrop-filter: blur(4px);
+
+    height: 35rem;
+    background-image: url('assets/bg.jpg');
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin:auto;
+    margin-top:1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    border-radius: 10% 10% 5% 5%; 
+
+}
+.myInfo::after{
+    content:'';
+    position:absolute;
+    z-index: 1;
+    background: rgba(12, 11, 11, 0.7);
+    backdrop-filter: blur(2px);
+    width:100%;
+    height:100%;
+    border-radius: 90% 10% 90% 5%; 
+}
+.name{
+    opacity: 1;
+    z-index:100;
+    font-size: 34px;
+    text-shadow: 1px 5px #FF0000;
+    color: rgb(253, 213, 213);
+    font-weight: bold;
+}
+.about{
+    opacity:1;
+    z-index:100;
+    color: white;
+}
+.about::after{
+    content:'';
+    color:sandybrown;
+    animation: aboutFrame 10s ease-in-out infinite;
+
+}
+
+@keyframes aboutFrame{
+    from{
+        content:'Bug Hunter';
+
+    }
+    50%{
+        content:'Bug Hunter';
+    }
+    60%{
+        content:'Web Dev'; 
+    }
+    to{
+        content:'Web Dev'; 
+    }
+}
+
