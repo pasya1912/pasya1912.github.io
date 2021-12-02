@@ -1,13 +1,19 @@
 
+html{
+    scroll-behavior:smooth;
+}
 body{
     background: rgb(227,232,233);
     background: linear-gradient(180deg, #e6e7e9 30%, #a4a9ad 70%);
+    background-size: cover;
+    background-attachment: fixed;
+
+    height: 100%;
     font-family: 'Oswald', sans-serif;
     margin: 0;
     color: black;
-
     font-size: 1.5rem/* 24px */;
-    line-height: 2rem/* 32px */;
+
     -webkit-user-select: none;    /* Safari */
     -webkit-touch-callout: none;  /* iOS Safari */
     -khtml-user-select: none;     /* Konqueror HTML */
@@ -56,8 +62,12 @@ header {
 {
 
 
+    body{
+        background: rgb(240,241,243);
+        background: linear-gradient(180deg, rgba(240,241,243,1) 13%, rgba(211,216,220,1) 47%, rgba(211,216,220,1) 75%);
+    }
     nav > ul[data-visible='false']{
-        right: -15rem;
+        right: -20rem;
         gap: 2rem;
         transition: right 0.5s ease;
         
@@ -69,7 +79,7 @@ header {
         cursor:pointer;
         z-index: 999;
         border: none;
-outline: none;
+        outline: none;
         background: url('assets/menu.svg');
         width:2rem;
         aspect-ratio: 1;
@@ -83,8 +93,8 @@ outline: none;
         top: 0;
         right: 0;
         margin:auto;
-        background: linear-gradient(180deg, rgb(230, 231, 233,0.1) 30%, rgb(164, 169, 173, 0.1) 70%);
-        backdrop-filter: blur(2px);
+        background: linear-gradient(180deg, rgb(230, 231, 233,0.3) 30%, rgb(164, 169, 173, 0.3) 70%);
+        backdrop-filter: blur(3px);
         padding-right: 7rem;
         height: 100%;
         padding-top:7rem;
@@ -96,6 +106,17 @@ outline: none;
     
     
     }
+    .about > p:nth-child(2) {
+
+        line-height: 2rem;
+        }
+
+}
+@media(max-width:1175px){
+    .about > p:nth-child(2) {
+
+        line-height: 2rem;
+        }
 
 }
 nav > ul > li {
@@ -103,8 +124,12 @@ nav > ul > li {
         list-style-type: none;
         text-decoration: none;
         width: max-content;
+
  
 
+}
+nav > ul > li:active{
+    font-weight: bold;
 }
 nav > ul > li::after{
     content: '';
@@ -137,11 +162,10 @@ nav > ul > li:hover::after{
 
 main{
 
-
+position:relative;
 
 }
 .myInfo{
-
     backdrop-filter: blur(4px);
 
     height: 35rem;
@@ -149,6 +173,8 @@ main{
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background-position: center;
+    border-radius: 0% 0% 80% 80%;
+
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -161,17 +187,19 @@ main{
     align-items: center;
     gap: 3rem;
     border-radius: 10% 10% 5% 5%; 
+    overflow: hidden;
 
 }
+
 .myInfo::after{
     content:'';
     position:absolute;
     z-index: 1;
-    background: rgba(12, 11, 11, 0.7);
+    background: rgba(78, 76, 76, 0.7);
     backdrop-filter: blur(2px);
     width:100%;
     height:100%;
-    border-radius: 90% 10% 90% 5%; 
+    border-radius: 10% 10% 5% 5%; 
 }
 .name{
     opacity: 1;
@@ -182,14 +210,17 @@ main{
     font-weight: bold;
 }
 .about{
+
+    width : 70%;
     opacity:1;
     z-index:100;
+    text-align: center;
     color: white;
 }
-.about::after{
+.whoami::after{
     content:'';
     color:sandybrown;
-    animation: aboutFrame 10s ease-in-out infinite;
+    animation: aboutFrame 6s ease-in-out infinite;
 
 }
 
@@ -209,3 +240,56 @@ main{
     }
 }
 
+.unsika:hover{
+    color:rgb(255, 119, 119);
+}
+
+.skill{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem;
+
+
+}
+main > h2{
+    text-align:center;
+    text-transform: uppercase;
+    font-weight:bold;
+
+}
+.skill-card{
+
+    
+    padding: 0.5rem 0 0.5rem 0;
+    border-radius: 5% 5% 10% 10%;
+    box-shadow: 1px 5px 5px 5px #b3b2b2;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 14%, rgba(209,214,217,1) 74%, rgba(205,205,205,1) 90%);
+    flex: 1 1 56rem;
+
+
+
+}
+.skill-card:hover{
+    transition: transform 150ms ease-in;
+    transform: scale(1.01);
+
+}
+.skill-title{
+    margin: 0 2rem 0 2rem;
+    text-align:center;
+    font-weight:bold;
+}
+.skill-description{
+    margin: 0 2rem 0 2rem;
+}
+@media(max-width: 760px)
+{
+    .skill-card{
+        flex: 100%;
+
+    }
+
+}
