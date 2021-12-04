@@ -28,7 +28,6 @@ a {
 
 header {
     cursor: default;
-
     height: 30px;
     display: flex;
     position:relative;
@@ -73,7 +72,7 @@ header {
         
     }
     .toggle-menu{
-        transition: transform 0.5s ease;
+        transition: height 1s ease-in-out;
         display:inline-block;
         position:absolute;
         cursor:pointer;
@@ -81,9 +80,11 @@ header {
         border: none;
         outline: none;
         background: url('assets/menu.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
         width:2rem;
-        aspect-ratio: 1;
-        top:1.5rem;
+        height:2rem;
+        top:1.305rem;
         right:2rem;
     }
     nav > ul {
@@ -167,7 +168,6 @@ position:relative;
 }
 .myInfo{
     backdrop-filter: blur(4px);
-
     height: 35rem;
     background-image: url('assets/bg.jpg');
     -webkit-backdrop-filter: blur(10px);
@@ -178,9 +178,10 @@ position:relative;
     background-repeat: no-repeat;
     background-size: cover;
 
-    margin:auto;
-    margin-top:1.5rem;
-    width: 100%;
+
+
+    margin: auto;
+    width: 97%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -191,6 +192,7 @@ position:relative;
 
 }
 
+
 .myInfo::after{
     content:'';
     position:absolute;
@@ -200,6 +202,26 @@ position:relative;
     width:100%;
     height:100%;
     border-radius: 10% 10% 5% 5%; 
+}
+.myInfo > div:nth-child(2){
+    z-index: 100;
+}
+.alias::after{
+    content:'You can call me';
+    text-shadow: 2px 3px 1px #353636;
+    color:white;
+    font-weight: bold;
+    animation: alias 10s infinite;
+
+}
+@keyframes alias {
+    from {
+        content:'You can call me';
+    }
+    35% {
+        content:'Zerboa';
+        text-shadow: 2px 3px 3px #ffcb87;
+    }
 }
 .name{
     opacity: 1;
@@ -226,17 +248,17 @@ position:relative;
 
 @keyframes aboutFrame{
     from{
-        content:'Bug Hunter';
+        content:'Web Developer'; 
 
     }
     50%{
+        content:'Web Developer'; 
+    }
+    75%{
         content:'Bug Hunter';
     }
-    60%{
-        content:'Web Dev'; 
-    }
     to{
-        content:'Web Dev'; 
+        content:'Bug Hunter';
     }
 }
 
@@ -244,7 +266,7 @@ position:relative;
     color:rgb(255, 119, 119);
 }
 
-.skill{
+.experience{
 
     display: flex;
     flex-wrap: wrap;
@@ -259,7 +281,7 @@ main > h2{
     font-weight:bold;
 
 }
-.skill-card{
+.experience-card{
 
     
     padding: 0.5rem 0 0.5rem 0;
@@ -267,16 +289,71 @@ main > h2{
     box-shadow: 1px 5px 5px 5px #b3b2b2;
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 14%, rgba(209,214,217,1) 74%, rgba(205,205,205,1) 90%);
-    flex: 1 1 56rem;
+    flex: 1 1 50rem;
 
 
 
 }
-.skill-card:hover{
+.experience-card:hover{
     transition: transform 150ms ease-in;
     transform: scale(1.01);
 
 }
+.experience-title{
+    margin: 0 2rem 0 2rem;
+    text-align:center;
+    font-weight:bold;
+}
+.experience-description{
+    margin: 0 2rem 0 2rem;
+}
+@media(max-width: 760px)
+{
+    .experience-card{
+        flex: 100%;
+
+    }
+
+}
+
+@media(min-width: 1345px)
+{
+    .experience-card{
+        flex: 1 1 40rem;
+
+    }
+
+}
+@media(max-width:1392px)
+{
+    .experience-card{
+        flex: 1 1 30rem;
+
+    }
+
+}
+
+
+.skill{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem;
+    color:rgb(77, 65, 65);
+}
+.skill-card{
+    padding: 0.5rem 0 0.5rem 0;
+    position:relative;
+    flex: 1 1 50rem;
+    background: rgb(205,205,205);
+    background: radial-gradient(circle, rgba(205,205,205,1) 14%, rgba(209,214,217,1) 44%, rgba(255,255,255,1) 90%);
+    width:100%;
+    height: 100%;
+    border-radius: 5% 5% 10% 10%;
+    box-shadow: 1px 5px 5px 5px #b3b2b2;
+
+}
+
 .skill-title{
     margin: 0 2rem 0 2rem;
     text-align:center;
@@ -285,11 +362,20 @@ main > h2{
 .skill-description{
     margin: 0 2rem 0 2rem;
 }
-@media(max-width: 760px)
-{
-    .skill-card{
-        flex: 100%;
-
-    }
+.arrow{
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: url('assets/arrow.svg');
+    background-repeat: no-repeat;
+    background-color:white;
+    opacity: 0.3;
+    background-size: cover;
+    align-items: center;
+    align-content: center;
 
 }

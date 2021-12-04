@@ -11,55 +11,110 @@
 <!--     <link rel="stylesheet" href="tailwind.css" id="rel"> -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class=" ">
+<body class=" " id="root">
     <header class="">
             <p>Rafli Pasya</p>
             <button class="toggle-menu" ></button>
         <nav>
 
             <ul  data-visible="false">
-                <li><a href="#skill">Kemampuan</a></li>
+
+                <li><a href="#experience">Kemampuan</a></li>
                 <li ><a href="">Pengalaman</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main >
         <section class="myInfo">
-            <h1 class="name">
-                Rafli Pasya
-            </h1>
-            <div class="about">
-                <p>i'm <span class="whoami"></span></p>
-                <p>Seorang penggiat IT yang saat ini menjadi mahasiswa Teknik Informatika di <a class="unsika" href="https://unsika.ac.id/">Universitas Singaperbangsa</a> Karawang</p>
-            </div>
+                <div class="name">
+                    Rafli Pasya
+                </div>
+                <div class="alias"></div>
+                <div class="about">
+                    <p>I am <span class="whoami"></span></p>
+                    <p>Seorang Website Developer yang saat ini menjadi mahasiswa Teknik Informatika di <a class="unsika" href="https://unsika.ac.id/">Universitas Singaperbangsa</a> Karawang</p>
+                </div>
+
 
         </section>
             <h2>
-                Kemampuan
+                Keahlian
             </h2>
             <section class="skill" id="skill">
                 <div class="skill-card">
                     <div class="skill-title">
-                        Back-end Developer
+                        PHP
                     </div>
                     <div class="skill-description">
-                        <p>Saya telah berpengalaman melakukan coding Back-end sejak tahun 2019, Sampai saat ini saya dapat menulis code yang Berbasis Object ( Object Oriented Programming ),Mudah dibaca, Terstruktur, dan dapat di Perluas. Teknologi yang saya gunakan adalah PHP ( Laravel ) LEMP Stack ( Linux, Nginx, MySQL )</p>
+                        <p>Saya banyak membuat code PHP berbasis object ( OOP ) menggunakan Laravel dengan mengimplementasi Controller-Service-Repository Design Pattern  sejak tahun 2019</p>
                     </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-title">
-                       Bug Hunter
+                       Javascript
                     </div>
                     <div class="skill-description">
-                        <p>Saya telah melakukan Whitehat Bug Hunting sejak tahun 2019. Target saya adalah Webapps dan beberapa Android Apps. Tools yang sering saya gunakan adalah Burp Suite.</p>
+                        <p>Cukup paham konsep dari javascript itu sendiri, dan sudah memulai belajar sejak tahun 2020. Saat ini saya sedang mempelajari ReactJS dan website ini akan diubah menjadi ReactJS nantinya</p>
                     </div>
                 </div>
-                
+                <div class="skill-card">
+                    <div class="skill-title">
+                       SQL ( MySQL )
+                    </div>
+                    <div class="skill-description">
+                        <p>Saya memahami query Create, Read, Update, Delete pada SQL database khususnya MySQL.</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-title">
+                       CSS & HTML
+                    </div>
+                    <div class="skill-description">
+                        <p>Saya memahami dasar dari CSS, website ini saya buat sendiri menggunakan CSS dan HTML</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-title">
+                       NodeJS
+                    </div>
+                    <div class="skill-description">
+                        <p>Saya dapat membuat berbagai macam program menggunakan NodeJS sejak tahun 2020. selama ini saya telah membuat Bot Automation menggunakan Puppeteer, dan beberapa library open-source. kedepannya akan saya gunakan sebagai backend</p>
+                    </div>
+                </div>
+
+
 
             </section>
+            <h2>
+                Pengalaman
+            </h2>
+            <section class="experience" id="experience">
+                <div class="experience-card">
+                    <div class="experience-title">
+                        Back-end Developer
+                    </div>
+                    <div class="experience-description">
+                        <p>Saya telah berpengalaman melakukan coding Back-end sejak tahun 2019, Sampai saat ini saya dapat menulis code yang Mudah dibaca, Terstruktur, dapat di Perluas serta Aman dari Peretasan. Teknologi yang saya gunakan adalah PHP ( Laravel ) LEMP Stack ( Linux, Nginx, MySQL ). Saya juga dapat melakukan optimasi dari sisi Code (caching, queue), dan server (load balance, swoole server).</p>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-title">
+                       Bug Hunter
+                    </div>
+                    <div class="experience-description">
+                        <p>Saya telah melakukan Whitehat Bug Bounty Hunting ( Web Apps & Mobile Apps ) di platform HackerOne serta Program External Lainnya sejak tahun 2019. Saya juga telah mendapatkan beberapa Apresiasi dari website dalam negeri maupun luar negeri. </p>
+                    </div>
+                </div>
 
+
+            </section>
+    <a href="#root" class="arrow"></a>
     </main>
 
 </body>
+<script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
     <script src="src.js"></script>
     </html>
