@@ -1,0 +1,91 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.nav .container {
+
+    height: 50px;
+    margin-top: 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 5px 5px 14px 2px rgba(253, 196, 53, 0.39);
+    padding: 1rem;
+
+}
+
+
+.nav .container .menu {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    padding: 0.1rem 1rem;
+
+
+
+}
+
+.nav .container .brand {
+    display: flex;
+    align-items: center;
+    color: #25282B;
+    font-weight: bold;
+}
+
+.nav .container .menu .items:hover {
+    transition: 0.1s;
+    border-bottom: 1px solid rgba(253, 196, 53);
+}
+
+.nav .container .menu .items {
+    text-decoration: none;
+    text-align: center;
+    color: #25282B;
+
+}
+
+.container .hero .foto {
+    width: 100%;
+    text-align: end;
+}
+
+.container .hero .detail .title {
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: rgb(238, 172, 6);
+
+}
+.container .hero .detail {
+    border: 1px solid red;
+    width: 100%;
+
+    
+}
+
+.container .hero .detail .title,
+.container .hero .name,
+.container .hero .ctas {
+    font-size: 2rem;
+    margin: 1.5rem;
+    font-weight: bold;
+
+}
+
+.container .hero .name,
+.container .hero .ctas {
+    color: #25282B;
+}
+
+.container .hero {
+    margin: 5rem auto;
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    gap: 1rem;
+
+}
+
